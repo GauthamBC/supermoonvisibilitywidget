@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Supermoon Viewing in 2026: Ranking All 50 U.S. States</title>
+</head>
+
+<body style="margin:0;">
+
+<section class="vi-compact-embed" role="region" aria-labelledby="vi-compact-embed-title"
+  style="max-width:860px;margin:16px auto;font:14px/1.35 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+         color:#181a1f;background:#ffffff;border:1px solid #DCEFE6;border-radius:12px;
+         box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 16px rgba(86,194,87,.10);">
+  <style>
+    /* === SCOPING PATCH ============================================== */
+    section.vi-compact-embed, section.vi-compact-embed * {
+      box-sizing: border-box;
+      font-family: inherit;
+      color: inherit;
+    }
+    section.vi-compact-embed { color-scheme: light; }
+    /* ================================================================= */
+
+    .vi-compact-embed *{box-sizing:border-box}
+    .vi-compact-embed{color-scheme:light}
+    .vi-compact-embed{
+      --brand-50:#F6FFF9; --brand-100:#DCF2EB; --brand-300:#BCE5D6;
+      --brand-500:#56C257; --brand-600:#3FA94B; --brand-700:#2E8538; --brand-900:#1F5D28;
+      --ink:#181a1f; --muted:#666b73; --border:#DCEFE6; --viz-h:88px;
+      --hover-tint: rgba(86,194,87,.12); --hover-ring:#BCE5D6; --hover-shadow:0 10px 24px rgba(86,194,87,.18);
+    }
+
+    /* Header */
+    .vi-compact-embed .head{
+      padding:14px 16px;border-bottom:1px solid var(--border)!important;color:#fff!important;
+      background:
+        radial-gradient(120% 140% at 85% 10%, rgba(255,255,255,.10) 0%, transparent 60%),
+        linear-gradient(90deg,var(--brand-900) 0%,var(--brand-600) 45%,var(--brand-500) 100%)!important;
+    }
+    .vi-compact-embed .title{margin:0 0 2px;font-size:clamp(16px,2.2vw,20px);line-height:1.2;font-weight:800;color:#fff!important}
+    .vi-compact-embed .sub{margin:0;color:rgba(255,255,255,.92)!important;font-size:12px}
+    .vi-compact-embed .meta{margin:4px 0 0;color:rgba(255,255,255,.85)!important;font-size:12px}
+
+    /* Rows */
+    .vi-compact-embed .table{padding:10px 12px}
+    .vi-compact-embed .row{
+      display:grid;grid-template-columns:36px 1fr minmax(240px,48%);gap:8px;align-items:center;margin:6px 0;
+      border:1px solid var(--border)!important;border-radius:12px;padding:8px 10px;background:#fff!important;
+      transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s ease,background-color .15s ease,border-color .15s ease;
+      transform-origin:center;
+    }
+    .vi-compact-embed .row:hover,.vi-compact-embed .row:focus-within{
+      background:linear-gradient(0deg,var(--hover-tint),var(--hover-tint)),#fff!important;
+      transform:scale(1.01);box-shadow:var(--hover-shadow);border-color:var(--hover-ring)!important;
+    }
+    @media (prefers-reduced-motion:reduce){
+      .vi-compact-embed .row{transition:none}
+      .vi-compact-embed .row:hover,.vi-compact-embed .row:focus-within{transform:none;box-shadow:none}
+    }
+    @media (max-width:640px){
+      .vi-compact-embed .row{grid-template-columns:30px 1fr}
+      .vi-compact-embed .metric{grid-column:1 / -1}
+    }
+
+    .vi-compact-embed .rank{display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
+    .vi-compact-embed .state{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink)}
+    .vi-compact-embed .chip{width:18px;height:18px;border-radius:50%;overflow:hidden;border:1px solid #cfe4da;background:#fff;flex-shrink:0}
+    .vi-compact-embed .chip img{width:100%;height:100%;object-fit:cover}
+
+    .vi-compact-embed .metric{position:relative;height:28px;border-radius:999px;background:rgba(86,194,87,.10)!important;overflow:hidden}
+    .vi-compact-embed .bar{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,var(--brand-600),var(--brand-500))!important;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
+    .vi-compact-embed .val{position:absolute;right:6px;top:50%;transform:translateY(-50%);font-variant-numeric:tabular-nums;font-weight:800;font-size:13px;color:#0e1a12!important;background:#fff!important;border:2px solid #e6e9ed!important;border-radius:999px;padding:2px 8px}
+
+    /* Gradient bars by probability band (based on implied probability) */
+    .vi-compact-embed .bar.band-very-high{background:linear-gradient(90deg,#1F5D28,#56C257)!important}  /* >=25% */
+    .vi-compact-embed .bar.band-high{background:linear-gradient(90deg,#2E8538,#63CA67)!important}       /* 20–<25% */
+    .vi-compact-embed .bar.band-mid{background:linear-gradient(90deg,#3FA94B,#71D279)!important}        /* 15–<20% */
+    .vi-compact-embed .bar.band-low{background:linear-gradient(90deg,#64C274,#84DB8E)!important}        /* 10–<15% */
+    .vi-compact-embed .bar.band-very-low{background:linear-gradient(90deg,#8AD79D,#9AE5A5)!important}   /* 5–<10% */
+    .vi-compact-embed .bar.band-tiny{background:linear-gradient(90deg,#9FE1B3,#A7E6BA)!important}       /* <5% */
+
+    /* Details panel */
+    .vi-compact-embed .details{
+      margin:0;padding:0;border:1px solid var(--border);border-width:0;border-radius:12px;background:var(--brand-50);
+      max-height:0;opacity:0;overflow:hidden;transform:translateY(-6px);
+      transition:max-height .28s ease,opacity .28s ease,transform .28s ease,padding .20s ease,margin .20s ease,border-width .20s ease;
+    }
+    .vi-compact-embed .details.open{margin:8px 0 12px;padding:12px;border-width:1px;max-height:420px;opacity:1;transform:translateY(0)}
+    .vi-compact-embed .metrics-title{margin:0 0 10px;font-weight:800;font-size:14px;color:var(--brand-900)}
+    .vi-compact-embed .metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    @media (max-width:640px){.vi-compact-embed .metrics-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+    /* Cards */
+    .vi-compact-embed .metric-card{
+      background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px 12px 12px;
+      display:grid;grid-template-rows:auto auto var(--viz-h) auto;gap:8px;align-content:start;
+    }
+    .vi-compact-embed .metric-label{font-size:12px;color:var(--muted);font-weight:700;margin:0;line-height:1.2}
+    .vi-compact-embed .metric-number{font-weight:800;font-size:20px;color:#0e1a1f;margin:0;line-height:1.1;font-variant-numeric:tabular-nums}
+    .vi-compact-embed .metric-scale{font-size:11px;color:#8a9099;margin:0}
+
+    /* Sparkline (elevation) */
+    .vi-compact-embed .spark{align-self:center}
+    .vi-compact-embed .spark svg{width:100%;height:var(--viz-h)}
+    .vi-compact-embed .spark-base{stroke:#e6f1ec;stroke-width:3;fill:none}
+    .vi-compact-embed .spark-line{stroke:url(#az-elev-grad);stroke-width:4;fill:none;stroke-linecap:round;transition:stroke-dashoffset .6s ease}
+    .vi-compact-embed .spark-dot{fill:var(--brand-500);stroke:#fff;stroke-width:2}
+    .vi-compact-embed .donut > div{display:contents}
+    .vi-compact-embed .donut circle.bg{stroke:#e6f4ee;stroke-width:10;fill:none}
+    .vi-compact-embed .donut circle.fg{stroke:var(--brand-600);stroke-width:10;fill:none;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset .7s ease}
+
+    /* Mini bars (clear days & humidity) */
+    .vi-compact-embed .mini-bar{height:10px;border-radius:999px;background:rgba(86,194,87,.16);overflow:hidden;align-self:center}
+    .vi-compact-embed .mini-bar .fill{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--brand-600),var(--brand-500));transition:width .6s ease}
+
+    /* Clickable hint */
+    .vi-compact-embed .row.is-clickable{cursor:pointer;position:relative}
+    .vi-compact-embed .row.is-clickable .metric{padding-right:128px}
+    .vi-compact-embed .row.is-clickable::after{
+      content:"Click for viewing factors";position:absolute;right:12px;top:50%;transform:translateY(-50%);
+      font-size:11px;color:#7cae85;white-space:nowrap;pointer-events:none;z-index:1;
+    }
+    .vi-compact-embed .metric .val{z-index:2}
+    @media (max-width:640px){.vi-compact-embed .row.is-clickable::after{display:none}}
+    .vi-compact-embed .row[aria-expanded="true"]::after{display:none}
+
+    .vi-compact-embed .details-close{margin-top:10px;align-self:flex-end;background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-weight:700;cursor:pointer}
+    .vi-compact-embed .details-close:hover{border-color:var(--hover-ring)}
+
+    /* Compact defaults / shared heights */
+    .vi-compact-embed{ --viz-h:56px; --card-h:176px }
+    .vi-compact-embed .metrics-grid{ grid-auto-rows:var(--card-h); gap:10px }
+    .vi-compact-embed .metric-card{ height:100%; padding:12px 12px 10px; gap:6px; grid-template-rows:auto auto var(--viz-h) auto }
+    .vi-compact-embed .metric-number{ font-size:19px }
+    .vi-compact-embed .spark svg{ height:var(--viz-h) }
+    .vi-compact-embed .donut{ row-gap:6px }
+    .vi-compact-embed .donut svg{ width:var(--viz-h); height:var(--viz-h) }
+    .vi-compact-embed .donut circle.bg,.vi-compact-embed .donut circle.fg{ stroke-width:8 }
+    .vi-compact-embed .mini-bar{ height:8px }
+    .vi-compact-embed .details.open{ padding:8px }
+
+    /* Big ring */
+    .vi-compact-embed{ --donut-h:104px; --card-h:196px }
+    .vi-compact-embed .metric-card:has(.donut){ grid-template-rows:auto auto var(--donut-h) auto }
+    .vi-compact-embed .donut,.vi-compact-embed .donut > div{ display:contents }
+    .vi-compact-embed .donut svg{
+      grid-row:3; width:var(--donut-h); height:var(--donut-h);
+      justify-self:center !important; margin-inline:auto; display:block;
+    }
+    .vi-compact-embed .donut .metric-number{ grid-row:2 }
+    .vi-compact-embed .donut .metric-scale{ grid-row:4 }
+
+    /* Calendar viz */
+    .vi-compact-embed{ --cal-h:80px }
+    .vi-compact-embed .metric-card:has(.calendar){ grid-template-rows:auto auto var(--cal-h) auto }
+    .vi-compact-embed .calendar{
+      height:var(--cal-h); display:grid; grid-template-columns:repeat(6,1fr);
+      grid-auto-rows:1fr; gap:6px; align-self:center;
+    }
+    .vi-compact-embed .calendar .day{ border-radius:6px; background:#eaf5ee; position:relative; overflow:hidden }
+    .vi-compact-embed .calendar .day.filled{ background:linear-gradient(180deg,var(--brand-600),var(--brand-500)) }
+    .vi-compact-embed .calendar .day.partial::after{
+      content:""; position:absolute; inset:0; width:calc(var(--part,0)*100%);
+      background:linear-gradient(90deg,var(--brand-600),var(--brand-500));
+    }
+
+    /* Shared viz row height */
+    .vi-compact-embed{ --viz-row-h:104px }
+    .vi-compact-embed .metric-card{ grid-template-rows:auto auto var(--viz-row-h) auto !important }
+    .vi-compact-embed .metric-card:has(.donut), .vi-compact-embed .metric-card:has(.calendar){
+      grid-template-rows:auto auto var(--viz-row-h) auto !important;
+    }
+    .vi-compact-embed .spark, .vi-compact-embed .calendar, .vi-compact-embed .mini-bar{ align-self:center !important }
+    .vi-compact-embed .spark svg{ height:min(var(--viz-h,56px), calc(var(--viz-row-h) - 2px)) }
+    .vi-compact-embed .calendar{ height:var(--viz-row-h) }
+
+    /* Desktop layout */
+    @media (min-width:641px){
+      .vi-compact-embed .metrics-grid{ grid-template-columns: repeat(4, minmax(0,1fr)) !important; }
+      .vi-compact-embed .row{ grid-template-columns: 36px 1fr minmax(240px,48%) !important; }
+      .vi-compact-embed .metric{ grid-column: auto !important; }
+    }
+    @media (max-width:640px){
+      .vi-compact-embed .metrics-grid{ grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+      .vi-compact-embed{ --card-h:188px; --viz-row-h:92px; --donut-h:92px }
+      .vi-compact-embed .calendar{ gap:5px }
+      .vi-compact-embed .metric-number{ font-size:18px }
+    }
+    @media (max-width:360px){
+      .vi-compact-embed .metrics-grid{ grid-template-columns: 1fr !important }
+    }
+
+    /* Desktop internal scroll */
+    .vi-compact-embed{ --pane-max-h: min(72vh, 680px); }
+    .vi-compact-embed .table{
+      max-height: var(--pane-max-h); overflow:auto; -webkit-overflow-scrolling:touch;
+      overscroll-behavior:contain; scrollbar-gutter:stable both-edges;
+    }
+    .vi-compact-embed .table::-webkit-scrollbar{ width:10px; height:8px }
+    .vi-compact-embed .table::-webkit-scrollbar-track{ background:var(--brand-50); border-radius:999px }
+    .vi-compact-embed .table::-webkit-scrollbar-thumb{
+      background:linear-gradient(180deg,var(--brand-600),var(--brand-500)); border-radius:999px; border:2px solid #fff;
+    }
+    .vi-compact-embed .table::-webkit-scrollbar-thumb:hover{ background:linear-gradient(180deg,var(--brand-700),var(--brand-600)) }
+    .vi-compact-embed .table{ scrollbar-width:thin; scrollbar-color:var(--brand-600) var(--brand-50) }
+
+    /* Darkness gauge (styles only) */
+    .vi-compact-embed .gauge-svg{ width:100%; height:var(--viz-row-h) }
+    .vi-compact-embed .gauge-track{ stroke:#e6f4ee; stroke-width:10; fill:none; stroke-linecap:round }
+    .vi-compact-embed .gauge-value{ stroke:url(#az-gauge-grad); stroke-width:10; fill:none; stroke-linecap:round; transition:stroke-dashoffset .7s ease }
+    .vi-compact-embed .gauge-needle{ transform-origin:70px 70px; transition:transform .6s cubic-bezier(.2,.8,.2,1) }
+    .vi-compact-embed .gauge-needle line{ stroke:#2E8538; stroke-width:3; stroke-linecap:round }
+    .vi-compact-embed .gauge-needle circle{ fill:#fff; stroke:#cfe4da }
+
+    /* Humidity droplet */
+    .vi-compact-embed .donut .drop{
+      fill: var(--brand-600);
+      stroke: #ffffff;
+      stroke-width: 2;
+      paint-order: stroke;
+      filter: drop-shadow(0 1px 0 rgba(0,0,0,.03));
+      transform-box: fill-box;
+      transform-origin: 50% 50%;
+      transform: scale(.7);
+      vector-effect: non-scaling-stroke;
+    }
+
+    /* Footer + embed button */
+    .vi-compact-embed .vi-footer {
+      display: block !important;
+      text-align: center;
+      padding: 6px 0;
+      border-top: 1px solid var(--border);
+      background:
+        radial-gradient(120% 140% at 85% 10%, rgba(255,255,255,.10) 0%, transparent 60%),
+        linear-gradient(90deg,var(--brand-900) 0%,var(--brand-600) 45%,var(--brand-500) 100%)!important;
+      color: #fff;
+      position: relative;
+      overflow: visible; /* allow popup to show above on mobile */
+    }
+    .vi-compact-embed .footer-inner {
+      display: flex; justify-content: center; align-items: center; gap: 12px; position: relative;
+    }
+    .vi-compact-embed .embed-btn {
+      position: absolute; left: 14px; background: #56C257; color: #fff; border: 1px solid #56C257;
+      border-radius: 8px; padding: 6px 14px; font: 13px/1.2 system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; cursor: pointer; transition: .2s ease;
+    }
+    .vi-compact-embed .embed-btn:hover { background:#3FA94B; border-color:#3FA94B; }
+    .vi-compact-embed .vi-footer img {
+      height: 52px; width: auto; display: inline-block; filter: brightness(0) invert(1);
+    }
+
+    .vi-compact-embed .embed-wrapper{
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(600px, calc(100% - 24px));
+      display: none;
+      padding: 16px 20px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: #fff;
+      color: #111;
+      box-shadow: 0 12px 28px rgba(0,0,0,.18);
+      z-index: 1000;
+    }
+    .vi-compact-embed .embed-wrapper::after{
+      content:""; position:absolute; left:50%; transform:translateX(-50%); bottom:-8px;
+      border:8px solid transparent; border-top-color:#fff; filter: drop-shadow(0 1px 1px rgba(0,0,0,.08));
+    }
+    .vi-compact-embed #copy-status { display:none; color:#008000; font-size:13px; margin-top:6px; }
+    .vi-compact-embed .embed-wrapper textarea{
+      width:100%; height:140px; font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+      color:#111; background:#fff; padding:10px 12px; border:1px solid #ddd; border-radius:8px; resize:none;
+    }
+    .vi-compact-embed .row.is-clickable::after{ display:none !important; } /* hide hint if it clips */
+
+    /* ===================== MOBILE OVERRIDES (single block) ===================== */
+    @media (max-width:640px){
+      html, body { height:auto !important; overflow:auto !important; }
+      /* Let the page behave normally; mirror desktop: .table scrolls, footer not sticky */
+      .vi-compact-embed{
+        display:block;
+        min-height:auto;
+        overflow:visible;
+      }
+
+      /* Keep .table as the scroll container (like desktop), a touch shorter for phones */
+      .vi-compact-embed { --pane-max-h: min(70vh, 560px); }
+      .vi-compact-embed .table{
+        max-height: var(--pane-max-h) !important;
+        overflow:auto !important;
+        -webkit-overflow-scrolling:touch !important;
+        padding-bottom:0 !important;
+        margin-bottom:0 !important;
+      }
+
+      /* Make footer content not overlap: button smaller and in-flow */
+      .vi-compact-embed .footer-inner{
+        justify-content:space-between !important;
+        padding:0 10px;
+        gap:8px;
+      }
+      .vi-compact-embed .embed-btn{
+        position:static !important;
+        padding:6px 10px;
+        font-size:12px;
+        line-height:1.2;
+        flex-shrink:0;
+      }
+      .vi-compact-embed .vi-footer img{
+        height:44px;
+      }
+
+      /* Footer behaves like desktop (not sticky) */
+      .vi-compact-embed .vi-footer{
+        position: static !important;
+        bottom: auto !important;
+        z-index: auto !important;
+        padding: 8px 0;
+        border-top:1px solid var(--border);
+        background:
+          radial-gradient(120% 140% at 85% 10%, rgba(255,255,255,.10) 0%, transparent 60%),
+          linear-gradient(90deg,var(--brand-900) 0%,var(--brand-600) 45%,var(--brand-500) 100%)!important;
+        overflow:visible !important; /* ensure popup is visible */
+      }
+
+      /* Keep the embed popup positioned like desktop (relative to footer) */
+      .vi-compact-embed .embed-wrapper{
+        position: absolute !important;
+        bottom: calc(100% + 10px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: min(600px, calc(100% - 24px)) !important;
+        max-height:65vh;
+        overflow:auto;
+        z-index:1000;
+      }
+
+      /* Details panel UX (keep) */
+      .vi-compact-embed .details.open{ max-height:none !important; }
+      .vi-compact-embed .details{ display:flex; flex-direction:column; scroll-margin-top:8px; }
+      .vi-compact-embed .details-close{
+        order:-1; align-self:flex-end; position:sticky; top:8px; z-index:5;
+        padding:8px 12px; border-radius:999px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,.08);
+      }
+
+      /* If the host iframe cannot resize, add .is-embedded on the <section> */
+      section.vi-compact-embed.is-embedded{
+        max-height:100dvh;
+        overflow:auto !important;
+        -webkit-overflow-scrolling:touch;
+      }
+      section.vi-compact-embed.is-embedded .table{
+        overflow:visible !important;
+        max-height:none !important;
+      }
+    }
+    /* =================== END MOBILE OVERRIDES (desktop untouched) ============== */
+  </style>
+
+  <div class="head">
+    <h3 id="vi-compact-embed-title" class="title">Supermoon Viewing in 2026: Ranking All 50 U.S. States</h3>
+    <p class="sub"><em>All US states ranked from best to worst for December supermoon visibility, based on sky clarity, elevation, darkness, and atmospheric conditions.</em></p>
+    <p class="meta">Click <strong>a state</strong> to see viewing factors.</p>
+  </div>
+
+  <div class="table">
+    
+    <div class="row is-clickable" data-state="New Mexico" data-rank="1" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">1</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="New Mexico flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_New_Mexico.svg"></span>
+        New Mexico
+      </div>
+      <div class="metric">
+        <span class="bar band-very-high" style="width:100.00%;"></span>
+        <span class="val">27.83% (+259)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Arizona" data-rank="2" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">2</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Arizona flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Arizona.svg"></span>
+        Arizona
+      </div>
+      <div class="metric">
+        <span class="bar band-very-high" style="width:95.94%;"></span>
+        <span class="val">26.70% (+275)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Colorado" data-rank="3" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">3</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Colorado flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Colorado.svg"></span>
+        Colorado
+      </div>
+      <div class="metric">
+        <span class="bar band-very-high" style="width:90.01%;"></span>
+        <span class="val">25.05% (+299)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Nevada" data-rank="4" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">4</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Nevada flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Nevada.svg"></span>
+        Nevada
+      </div>
+      <div class="metric">
+        <span class="bar band-high" style="width:77.87%;"></span>
+        <span class="val">21.67% (+361)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Wyoming" data-rank="5" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">5</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Wyoming flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Wyoming.svg"></span>
+        Wyoming
+      </div>
+      <div class="metric">
+        <span class="bar band-high" style="width:77.33%;"></span>
+        <span class="val">21.52% (+365)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="California" data-rank="6" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">6</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="California flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_California.svg"></span>
+        California
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:67.16%;"></span>
+        <span class="val">18.69% (+435)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Kansas" data-rank="7" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">7</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Kansas flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Kansas.svg"></span>
+        Kansas
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:63.85%;"></span>
+        <span class="val">17.77% (+463)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Hawaii" data-rank="8" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">8</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Hawaii flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Hawaii.svg"></span>
+        Hawaii
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:62.99%;"></span>
+        <span class="val">17.53% (+470)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Texas" data-rank="9" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">9</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Texas flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Texas.svg"></span>
+        Texas
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:61.88%;"></span>
+        <span class="val">17.22% (+481)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Utah" data-rank="10" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">10</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Utah flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Utah.svg"></span>
+        Utah
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:61.05%;"></span>
+        <span class="val">16.99% (+489)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Oklahoma" data-rank="11" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">11</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Oklahoma flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Oklahoma.svg"></span>
+        Oklahoma
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:59.65%;"></span>
+        <span class="val">16.60% (+502)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Nebraska" data-rank="12" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">12</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Nebraska flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Nebraska.svg"></span>
+        Nebraska
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:59.36%;"></span>
+        <span class="val">16.52% (+505)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Virginia" data-rank="13" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">13</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Virginia flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Virginia.svg"></span>
+        Virginia
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:55.77%;"></span>
+        <span class="val">15.52% (+544)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="North Carolina" data-rank="14" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">14</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="North Carolina flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_North_Carolina.svg"></span>
+        North Carolina
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:55.59%;"></span>
+        <span class="val">15.47% (+546)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Florida" data-rank="15" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">15</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Florida flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Florida.svg"></span>
+        Florida
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:55.05%;"></span>
+        <span class="val">15.32% (+553)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Arkansas" data-rank="16" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">16</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Arkansas flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Arkansas.svg"></span>
+        Arkansas
+      </div>
+      <div class="metric">
+        <span class="bar band-mid" style="width:54.08%;"></span>
+        <span class="val">15.05% (+564)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="New Hampshire" data-rank="17" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">17</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="New Hampshire flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_New_Hampshire.svg"></span>
+        New Hampshire
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:52.89%;"></span>
+        <span class="val">14.72% (+579)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="South Dakota" data-rank="18" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">18</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="South Dakota flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_South_Dakota.svg"></span>
+        South Dakota
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:51.56%;"></span>
+        <span class="val">14.35% (+597)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="South Carolina" data-rank="19" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">19</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="South Carolina flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_South_Carolina.svg"></span>
+        South Carolina
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:50.77%;"></span>
+        <span class="val">14.13% (+608)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Georgia" data-rank="20" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">20</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Georgia flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Georgia_(U.S._state).svg"></span>
+        Georgia
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:50.05%;"></span>
+        <span class="val">13.93% (+618)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Missouri" data-rank="21" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">21</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Missouri flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Missouri.svg"></span>
+        Missouri
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:49.84%;"></span>
+        <span class="val">13.87% (+621)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Massachusetts" data-rank="22" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">22</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Massachusetts flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Massachusetts.svg"></span>
+        Massachusetts
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:49.77%;"></span>
+        <span class="val">13.85% (+622)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Maryland" data-rank="23" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">23</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Maryland flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Maryland.svg"></span>
+        Maryland
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:48.69%;"></span>
+        <span class="val">13.55% (+638)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Maine" data-rank="24" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">24</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Maine flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Maine.svg"></span>
+        Maine
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:48.54%;"></span>
+        <span class="val">13.51% (+640)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Alabama" data-rank="25" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">25</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Alabama flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Alabama.svg"></span>
+        Alabama
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:46.25%;"></span>
+        <span class="val">12.87% (+677)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Tennessee" data-rank="26" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">26</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Tennessee flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Tennessee.svg"></span>
+        Tennessee
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:44.45%;"></span>
+        <span class="val">12.37% (+708)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Montana" data-rank="27" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">27</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Montana flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Montana.svg"></span>
+        Montana
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:44.23%;"></span>
+        <span class="val">12.31% (+712)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Alaska" data-rank="28" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">28</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Alaska flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Alaska.svg"></span>
+        Alaska
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:42.69%;"></span>
+        <span class="val">11.88% (+742)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Rhode Island" data-rank="29" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">29</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Rhode Island flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Rhode_Island.svg"></span>
+        Rhode Island
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:42.44%;"></span>
+        <span class="val">11.81% (+747)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Louisiana" data-rank="30" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">30</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Louisiana flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Louisiana.svg"></span>
+        Louisiana
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:42.15%;"></span>
+        <span class="val">11.73% (+753)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Mississippi" data-rank="31" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">31</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Mississippi flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Mississippi.svg"></span>
+        Mississippi
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:42.08%;"></span>
+        <span class="val">11.71% (+754)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Idaho" data-rank="32" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">32</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Idaho flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Idaho.svg"></span>
+        Idaho
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:42.04%;"></span>
+        <span class="val">11.70% (+755)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Delaware" data-rank="33" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">33</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Delaware flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Delaware.svg"></span>
+        Delaware
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:40.46%;"></span>
+        <span class="val">11.26% (+788)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Connecticut" data-rank="34" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">34</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Connecticut flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Connecticut.svg"></span>
+        Connecticut
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:40.14%;"></span>
+        <span class="val">11.17% (+795)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="North Dakota" data-rank="35" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">35</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="North Dakota flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_North_Dakota.svg"></span>
+        North Dakota
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:40.03%;"></span>
+        <span class="val">11.14% (+798)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Minnesota" data-rank="36" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">36</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Minnesota flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Minnesota.svg"></span>
+        Minnesota
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:39.67%;"></span>
+        <span class="val">11.04% (+806)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="West Virginia" data-rank="37" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">37</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="West Virginia flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_West_Virginia.svg"></span>
+        West Virginia
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:38.45%;"></span>
+        <span class="val">10.70% (+835)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Pennsylvania" data-rank="38" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">38</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Pennsylvania flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Pennsylvania.svg"></span>
+        Pennsylvania
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:37.98%;"></span>
+        <span class="val">10.57% (+846)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Iowa" data-rank="39" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">39</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Iowa flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Iowa.svg"></span>
+        Iowa
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:37.41%;"></span>
+        <span class="val">10.41% (+861)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Illinois" data-rank="40" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">40</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Illinois flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Illinois.svg"></span>
+        Illinois
+      </div>
+      <div class="metric">
+        <span class="bar band-low" style="width:36.26%;"></span>
+        <span class="val">10.09% (+891)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Wisconsin" data-rank="41" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">41</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Wisconsin flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Wisconsin.svg"></span>
+        Wisconsin
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:35.90%;"></span>
+        <span class="val">9.99% (+901)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="New Jersey" data-rank="42" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">42</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="New Jersey flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_New_Jersey.svg"></span>
+        New Jersey
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:35.82%;"></span>
+        <span class="val">9.97% (+903)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Kentucky" data-rank="43" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">43</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Kentucky flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Kentucky.svg"></span>
+        Kentucky
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:34.75%;"></span>
+        <span class="val">9.67% (+934)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Vermont" data-rank="44" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">44</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Vermont flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Vermont.svg"></span>
+        Vermont
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:32.34%;"></span>
+        <span class="val">9.00% (+1011)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Oregon" data-rank="45" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">45</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Oregon flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Oregon.svg"></span>
+        Oregon
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:28.39%;"></span>
+        <span class="val">7.90% (+1166)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="New York" data-rank="46" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">46</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="New York flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_New_York.svg"></span>
+        New York
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:27.49%;"></span>
+        <span class="val">7.65% (+1207)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Michigan" data-rank="47" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">47</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Michigan flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Michigan.svg"></span>
+        Michigan
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:24.54%;"></span>
+        <span class="val">6.83% (+1364)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Ohio" data-rank="48" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">48</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Ohio flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Ohio.svg"></span>
+        Ohio
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:24.25%;"></span>
+        <span class="val">6.75% (+1381)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Washington" data-rank="49" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">49</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Washington flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Washington.svg"></span>
+        Washington
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:22.67%;"></span>
+        <span class="val">6.31% (+1485)</span>
+      </div>
+    </div>
+
+
+    <div class="row is-clickable" data-state="Indiana" data-rank="50" aria-expanded="false" tabindex="0" role="button">
+      <div class="rank">50</div>
+      <div class="state">
+        <span class="chip"><img loading="lazy" decoding="async" alt="Indiana flag" width="18" height="18" src="https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Indiana.svg"></span>
+        Indiana
+      </div>
+      <div class="metric">
+        <span class="bar band-very-low" style="width:20.98%;"></span>
+        <span class="val">5.84% (+1612)</span>
+      </div>
+    </div>
+
+    <!-- Shared details panel -->
+    <div id="az-details" class="details" aria-hidden="true" role="region" aria-labelledby="az-metrics-title">
+      <h4 id="az-metrics-title" class="metrics-title">Supermoon Viewing Factors</h4>
+      <div class="metrics-grid">
+        <!-- Elevation -->
+        <div class="metric-card">
+          <div class="metric-label">Avg. Elevation</div>
+          <div class="metric-number"><span id="az-elev-val">0 ft</span></div>
+          <div class="spark" aria-hidden="true">
+            <svg id="az-elev-spark" viewBox="0 0 160 60" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="az-elev-grad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#2E8538"></stop>
+                  <stop offset="100%" stop-color="#56C257"></stop>
+                </linearGradient>
+              </defs>
+              <path class="spark-base" d="M0,58 L160,58"></path>
+              <path id="az-elev-line" class="spark-line" d="M0,58 L160,58"></path>
+              <circle id="az-elev-dot" class="spark-dot" cx="160" cy="58" r="4"></circle>
+            </svg>
+          </div>
+          <div class="metric-scale">Above sea level</div>
+        </div>
+
+        <!-- Darkness gauge -->
+        <div class="metric-card">
+          <div class="metric-label">Darkness Score (1–5)</div>
+          <div class="metric-number"><span id="az-dark-val">0.00 / 5</span></div>
+          <div class="gauge" aria-hidden="true">
+            <svg class="gauge-svg" viewBox="0 0 140 80" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="az-gauge-grad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"  stop-color="#3FA94B"/>
+                  <stop offset="100%" stop-color="#56C257"/>
+                </linearGradient>
+              </defs>
+              <path id="az-dark-track" class="gauge-track" d="M10,70 A60,60 0 0 1 130,70"></path>
+              <path id="az-dark-value" class="gauge-value" d="M10,70 A60,60 0 0 1 130,70"></path>
+              <g id="az-dark-needle-group" class="gauge-needle">
+                <line x1="70" y1="70" x2="70" y2="22"></line>
+                <circle cx="70" cy="70" r="4"></circle>
+              </g>
+            </svg>
+          </div>
+          <div class="metric-scale">0 • 5</div>
+        </div>
+
+        <!-- Clear days -->
+        <div class="metric-card">
+          <div class="metric-label">Avg. Clear-Sky Days (Dec)</div>
+          <div class="metric-number"><span id="az-clear-val">0.0 days</span></div>
+          <div id="az-clear-cal" class="calendar" aria-hidden="true"></div>
+          <div class="metric-scale">0 • 31</div>
+        </div>
+
+        <!-- Humidity donut -->
+        <div class="metric-card">
+          <div class="metric-label">Avg. December Humidity</div>
+          <div class="donut">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <circle class="bg" cx="36" cy="36" r="26"></circle>
+              <circle id="az-humid-arc" class="fg" cx="36" cy="36" r="26" stroke-dasharray="0" stroke-dashoffset="0"></circle>
+              <path id="az-humid-drop" class="drop"
+                    d="M36 18
+                       C 30 26, 26 32, 26 37
+                       C 26 45, 31.5 50, 36 50
+                       C 40.5 50, 46 45, 46 37
+                       C 46 32, 42 26, 36 18 Z"/>
+            </svg>
+            <div>
+              <div class="metric-number"><span id="az-humid-val">0%</span></div>
+              <div class="metric-scale">0% • 100%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="az-close" class="details-close" type="button" aria-label="Close viewing factors">Close ✕</button>
+    </div>
+  </div>
+
+  <div class="vi-footer">
+    <div class="footer-inner">
+      <button id="copy-embed-btn" class="embed-btn" aria-controls="embed-wrapper" aria-expanded="false">🔗 Embed This Table</button>
+      <img src="https://i.postimg.cc/x1nG117r/AN-final2-logo.png"
+           alt="The Action Network logo"
+           width="120" height="auto" loading="lazy" decoding="async" />
+    </div>
+
+    <div id="embed-wrapper" class="embed-wrapper">
+      <textarea id="embed-code" readonly>&lt;iframe src="https://GauthamBC.github.io/supermoonvisibilitywidget/supermoon_table.html"
+      title="Supermoon Viewing in 2026: Ranking All 50 U.S. States"
+      width="100%" height="650"
+      scrolling="no"
+      style="border:0;" loading="lazy"&gt;&lt;/iframe&gt;
+      </textarea>
+      <p id="copy-status">Embed code copied!</p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      /* --- dataset for all rows (December metrics) --- */
+      const DATA = {
+        "New Mexico":  { elev:5700.0, dark:4.24, clear:18.67, humid:53.33 },
+        "Arizona":  { elev:4100.0, dark:4.13, clear:18.40, humid:51.88 },
+        "Colorado":  { elev:6800.0, dark:4.11, clear:16.40, humid:59.00 },
+        "Nevada":  { elev:5500.0, dark:4.40, clear:13.40, humid:60.70 },
+        "Wyoming":  { elev:6700.0, dark:4.33, clear:13.00, humid:62.75 },
+        "California":  { elev:2900.0, dark:4.18, clear:13.85, humid:66.35 },
+        "Kansas":  { elev:2000.0, dark:4.00, clear:14.60, humid:69.30 },
+        "Hawaii":  { elev:3030.0, dark:4.06, clear:14.25, humid:72.38 },
+        "Texas":  { elev:1700.0, dark:3.93, clear:13.73, humid:67.06 },
+        "Utah":  { elev:6100.0, dark:4.26, clear:11.50, humid:74.50 },
+        "Oklahoma":  { elev:1300.0, dark:3.47, clear:14.50, humid:68.25 },
+        "Nebraska":  { elev:2600.0, dark:3.83, clear:13.29, humid:70.29 },
+        "Virginia":  { elev:950.0, dark:3.50, clear:13.00, humid:66.50 },
+        "North Carolina":  { elev:700.0, dark:3.50, clear:13.80, humid:69.00 },
+        "Florida":  { elev:100.0, dark:3.75, clear:14.73, humid:73.25 },
+        "Arkansas":  { elev:650.0, dark:4.00, clear:13.00, humid:71.25 },
+        "New Hampshire":  { elev:1000.0, dark:4.09, clear:12.00, humid:70.50 },
+        "South Dakota":  { elev:2200.0, dark:4.07, clear:11.50, humid:73.50 },
+        "South Carolina":  { elev:350.0, dark:3.00, clear:13.00, humid:67.25 },
+        "Georgia":  { elev:600.0, dark:3.29, clear:12.67, humid:69.67 },
+        "Missouri":  { elev:800.0, dark:4.00, clear:12.00, humid:73.00 },
+        "Massachusetts":  { elev:500.0, dark:3.00, clear:12.50, humid:67.00 },
+        "Maryland":  { elev:350.0, dark:3.00, clear:12.00, humid:66.00 },
+        "Maine":  { elev:600.0, dark:4.09, clear:11.50, humid:72.75 },
+        "Alabama":  { elev:500.0, dark:3.50, clear:11.75, humid:72.00 },
+        "Tennessee":  { elev:900.0, dark:3.29, clear:11.20, humid:71.70 },
+        "Montana":  { elev:3400.0, dark:4.33, clear:7.33, humid:71.86 },
+        "Alaska":  { elev:1900.0, dark:4.59, clear:9.06, humid:77.85 },
+        "Rhode Island":  { elev:200.0, dark:2.00, clear:12.00, humid:66.00 },
+        "Louisiana":  { elev:100.0, dark:3.22, clear:12.00, humid:74.75 },
+        "Mississippi":  { elev:300.0, dark:3.00, clear:12.00, humid:73.83 },
+        "Idaho":  { elev:5000.0, dark:4.25, clear:6.67, humid:76.00 },
+        "Delaware":  { elev:60.0, dark:2.00, clear:12.00, humid:68.00 },
+        "Connecticut":  { elev:500.0, dark:2.00, clear:11.50, humid:67.75 },
+        "North Dakota":  { elev:1900.0, dark:3.17, clear:10.67, humid:77.00 },
+        "Minnesota":  { elev:1200.0, dark:4.06, clear:9.50, humid:77.40 },
+        "West Virginia":  { elev:1500.0, dark:3.89, clear:7.75, humid:71.88 },
+        "Pennsylvania":  { elev:1100.0, dark:3.11, clear:9.00, humid:70.50 },
+        "Iowa":  { elev:1100.0, dark:3.08, clear:10.50, humid:76.62 },
+        "Illinois":  { elev:600.0, dark:3.17, clear:10.17, humid:76.00 },
+        "Wisconsin":  { elev:1050.0, dark:3.40, clear:9.25, humid:75.88 },
+        "New Jersey":  { elev:250.0, dark:1.00, clear:12.00, humid:67.00 },
+        "Kentucky":  { elev:750.0, dark:3.00, clear:9.00, humid:72.62 },
+        "Vermont":  { elev:1000.0, dark:4.00, clear:6.00, humid:72.00 },
+        "Oregon":  { elev:3300.0, dark:4.22, clear:5.25, humid:82.06 },
+        "New York":  { elev:1000.0, dark:3.16, clear:5.60, humid:70.39 },
+        "Michigan":  { elev:900.0, dark:4.05, clear:5.14, humid:78.25 },
+        "Ohio":  { elev:850.0, dark:3.00, clear:6.50, humid:76.12 },
+        "Washington":  { elev:1700.0, dark:4.00, clear:5.50, humid:83.75 },
+        "Indiana":  { elev:700.0, dark:2.00, clear:7.75, humid:77.25 }
+      };
+      const DARK_MAX = 5;
+
+      const rows   = document.querySelectorAll('.vi-compact-embed .row.is-clickable[data-state]');
+      const panel  = document.getElementById('az-details');
+      const closeB = document.getElementById('az-close');
+
+      /* elevation scale uses min/max across all states */
+      const allElev = Object.values(DATA).map(d=>d.elev);
+      const elevMin = Math.min(...allElev);
+      const elevMax = Math.max(...allElev);
+
+      function drawElevationSpark(val){
+        const base = document.querySelector('#az-elev-spark .spark-base');
+        const line = document.getElementById('az-elev-line');
+        const dot  = document.getElementById('az-elev-dot');
+        if(!line || !dot) return;
+
+        const H=60, W=160, padX=6, baselineY=H-2, x0=padX, x1=W-padX;
+        const pct  = (val - elevMin) / Math.max(1,(elevMax - elevMin));
+        const yEnd = baselineY - (pct * (H - 12));
+
+        if (base) base.setAttribute('d', `M${x0},${baselineY} L${x1},${baselineY}`);
+        line.setAttribute('d', `M${x0},${baselineY} L${x1},${yEnd.toFixed(2)}`);
+        dot.setAttribute('cx', x1);
+        dot.setAttribute('cy', yEnd.toFixed(2));
+
+        const L = line.getTotalLength();
+        line.style.strokeDasharray = L;
+        line.style.strokeDashoffset = L;
+        requestAnimationFrame(()=>{ line.style.strokeDashoffset = 0; });
+      }
+
+      function drawDarknessGauge(val){
+        const gVal    = document.getElementById('az-dark-value');
+        const gNeedle = document.getElementById('az-dark-needle-group');
+        if(!gVal || !gNeedle) return;
+
+        const len = gVal.getTotalLength();
+        gVal.style.strokeDasharray = len.toFixed(1);
+        gVal.style.strokeDashoffset = len.toFixed(1);
+
+        const pct = Math.max(0, Math.min(1, val / DARK_MAX));
+        requestAnimationFrame(()=>{
+          gVal.style.strokeDashoffset = (len * (1 - pct)).toFixed(1);
+          const angle = -90 + 180 * pct;
+          gNeedle.style.transform = `rotate(${angle}deg)`;
+        });
+      }
+
+      function drawHumidityRing(pctVal){
+        const arc = document.getElementById('az-humid-arc');
+        if(!arc) return;
+        const r=26, C=2*Math.PI*r;
+        arc.style.strokeDasharray = C.toFixed(1);
+        arc.style.strokeDashoffset = C.toFixed(1);
+        const pct = Math.max(0, Math.min(1, pctVal/100));
+        requestAnimationFrame(()=> arc.style.strokeDashoffset = (C*(1-pct)).toFixed(1));
+      }
+
+      function buildCalendar(days){
+        const cal = document.getElementById('az-clear-cal');
+        if(!cal) return;
+        cal.innerHTML = '';
+        const total = 31;
+        const whole = Math.floor(days);
+        const frac  = Math.max(0, Math.min(1, days - whole));
+        for(let i=0;i<total;i++){
+          const cell=document.createElement('span');
+          cell.className='day';
+          if(i<whole) cell.classList.add('filled');
+          else if(i===whole && frac>0){ cell.classList.add('partial'); cell.style.setProperty('--part', frac.toFixed(2)); }
+          cal.appendChild(cell);
+        }
+      }
+
+      function renderState(name){
+        const d = DATA[name]; if(!d) return;
+        const title = document.getElementById('az-metrics-title'); if(title) title.textContent = name+' — Supermoon Viewing Factors';
+        const ez = document.getElementById('az-elev-val');   if(ez) ez.textContent = d.elev.toLocaleString()+' ft';
+        const dz = document.getElementById('az-dark-val');   if(dz) dz.textContent = d.dark.toFixed(2)+' / 5';
+        const cz = document.getElementById('az-clear-val');  if(cz) cz.textContent = d.clear.toFixed(1)+' days';
+        const hz = document.getElementById('az-humid-val');  if(hz) hz.textContent = Math.round(d.humid)+'%';
+
+        drawElevationSpark(d.elev);
+        drawDarknessGauge(d.dark);
+        drawHumidityRing(d.humid);
+        buildCalendar(d.clear);
+      }
+
+      function openUnderRow(row){
+        const state = row.dataset.state;
+        row.after(panel); // move shared panel under row
+        document.querySelectorAll('.vi-compact-embed .row.is-clickable[aria-expanded]')
+          .forEach(r=>r.setAttribute('aria-expanded','false'));
+        row.setAttribute('aria-expanded','true');
+
+        if(!panel.classList.contains('open')){
+          panel.classList.add('open');
+          panel.setAttribute('aria-hidden','false');
+        }
+        renderState(state);
+        panel.scrollIntoView({block:'nearest', behavior:'smooth'});
+      }
+
+      function closePanel(){
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden','true');
+        document.querySelectorAll('.vi-compact-embed .row.is-clickable[aria-expanded]')
+          .forEach(r=>r.setAttribute('aria-expanded','false'));
+      }
+
+      rows.forEach(row=>{
+        row.addEventListener('click', ()=>{
+          const isExpanded  = row.getAttribute('aria-expanded') === 'true';
+          const panelIsOpen = panel.classList.contains('open');
+          if (isExpanded && panelIsOpen) closePanel();
+          else openUnderRow(row);
+        });
+
+        row.addEventListener('keydown', e=>{
+          if(e.key==='Enter' || e.key===' '){
+            e.preventDefault();
+            const isExpanded  = row.getAttribute('aria-expanded') === 'true';
+            const panelIsOpen = panel.classList.contains('open');
+            if (isExpanded && panelIsOpen) closePanel();
+            else openUnderRow(row);
+          }
+        });
+      });
+
+      if(closeB) closeB.addEventListener('click', closePanel);
+      document.addEventListener('keydown', e=>{ if(e.key==='Escape' && panel.classList.contains('open')) closePanel(); });
+
+      /* ---- Auto-resize messaging to parent (iframe) ---- */
+      function sendHeightToParent() {
+        try {
+          const height = document.body.scrollHeight;
+          window.parent.postMessage({ type: "resize-iframe", height: height, src: window.location.href }, "*");
+        } catch (e) {}
+      }
+      window.addEventListener("load", sendHeightToParent);
+      window.addEventListener("resize", sendHeightToParent);
+      const observer = new MutationObserver(sendHeightToParent);
+      observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+
+      /* ---- Embed button copy behavior ---- */
+      const btn     = document.getElementById('copy-embed-btn');
+      const wrapper = document.getElementById('embed-wrapper');
+      const ta      = document.getElementById('embed-code');
+      const status  = document.getElementById('copy-status');
+
+      if (btn && ta && wrapper && status) {
+        btn.addEventListener('click', () => {
+          const isHidden = wrapper.style.display === 'none' || wrapper.style.display === '';
+          wrapper.style.display = isHidden ? 'block' : 'none';
+          btn.textContent = isHidden ? 'Hide Embed Code' : '🔗 Embed This Table';
+          btn.setAttribute('aria-expanded', String(isHidden));
+          if (isHidden) {
+            ta.focus();
+            ta.select();
+            try { document.execCommand('copy'); } catch(e) {}
+            status.style.display = 'block';
+            setTimeout(() => status.style.display = 'none', 2500);
+          } else {
+            btn.focus();
+          }
+          sendHeightToParent();
+        });
+
+        // Close when clicking outside the popup
+        document.addEventListener('click', (e)=>{
+          const open = wrapper.style.display === 'block';
+          if (open && !wrapper.contains(e.target) && !btn.contains(e.target)) {
+            wrapper.style.display = 'none';
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = '🔗 Embed This Table';
+            sendHeightToParent();
+          }
+        });
+
+        // Close on Esc when popup is open
+        document.addEventListener('keydown', (e)=>{
+          if (e.key === 'Escape' && wrapper.style.display === 'block') {
+            wrapper.style.display = 'none';
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = '🔗 Embed This Table';
+            btn.focus();
+            sendHeightToParent();
+          }
+        });
+      }
+    })();
+  </script>
+</section>
+</body>
+</html>
